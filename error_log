@@ -1,0 +1,16 @@
+[04-Jan-2018 00:03:42] PHP Parse error:  syntax error, unexpected T_CONST in /home1/dumkalco/public_html/NEWERP/system/core/CodeIgniter.php on line 58
+[04-Jan-2018 00:05:59] PHP Parse error:  syntax error, unexpected T_CONST in /home1/dumkalco/public_html/NEWERP/system/core/CodeIgniter.php on line 58
+[04-Jan-2018 00:06:04] PHP Parse error:  syntax error, unexpected T_CONST in /home1/dumkalco/public_html/NEWERP/system/core/CodeIgniter.php on line 58
+[04-Jan-2018 00:07:00] PHP Parse error:  syntax error, unexpected T_CONST in /home1/dumkalco/public_html/NEWERP/system/core/CodeIgniter.php on line 58
+[05-Jan-2018 02:47:39] PHP Warning:  mysqli::mysqli() [<a href='mysqli.mysqli'>mysqli.mysqli</a>]: (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home1/dumkalco/public_html/NEWERP/search.php on line 9
+[05-Jan-2018 02:47:39] PHP Warning:  mysqli::query() [<a href='mysqli.query'>mysqli.query</a>]: Couldn't fetch mysqli in /home1/dumkalco/public_html/NEWERP/search.php on line 15
+[05-Jan-2018 02:47:39] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home1/dumkalco/public_html/NEWERP/search.php on line 16
+[05-Jan-2018 02:47:41] PHP Warning:  mysqli::mysqli() [<a href='mysqli.mysqli'>mysqli.mysqli</a>]: (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home1/dumkalco/public_html/NEWERP/search.php on line 9
+[05-Jan-2018 02:47:41] PHP Warning:  mysqli::query() [<a href='mysqli.query'>mysqli.query</a>]: Couldn't fetch mysqli in /home1/dumkalco/public_html/NEWERP/search.php on line 15
+[05-Jan-2018 02:47:41] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home1/dumkalco/public_html/NEWERP/search.php on line 16
+[05-Jan-2018 02:47:42] PHP Warning:  mysqli::mysqli() [<a href='mysqli.mysqli'>mysqli.mysqli</a>]: (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home1/dumkalco/public_html/NEWERP/search.php on line 9
+[05-Jan-2018 02:47:42] PHP Warning:  mysqli::query() [<a href='mysqli.query'>mysqli.query</a>]: Couldn't fetch mysqli in /home1/dumkalco/public_html/NEWERP/search.php on line 15
+[05-Jan-2018 02:47:42] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home1/dumkalco/public_html/NEWERP/search.php on line 16
+[05-Jan-2018 02:47:44] PHP Warning:  mysqli::mysqli() [<a href='mysqli.mysqli'>mysqli.mysqli</a>]: (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home1/dumkalco/public_html/NEWERP/search.php on line 9
+[05-Jan-2018 02:47:44] PHP Warning:  mysqli::query() [<a href='mysqli.query'>mysqli.query</a>]: Couldn't fetch mysqli in /home1/dumkalco/public_html/NEWERP/search.php on line 15
+[05-Jan-2018 02:47:44] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home1/dumkalco/public_html/NEWERP/search.php on line 16
