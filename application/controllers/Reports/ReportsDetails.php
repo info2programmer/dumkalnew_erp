@@ -32,7 +32,7 @@ public function checklist($depId,$actId,$uId)
 		$checkExist = $this->db->query('SELECT * FROM tbl_access WHERE department_id='.$depId.' AND activity_id='.$actId.' AND user_id='.$uId)->num_rows();
 		if($checkExist > 0 ){
 		 $category['regyr'] = $this->db->query('select distinct reg_year from td_student_details')->result();
-        $category['subject'] = $this->db->query('select g.*,s.stream_name from td_subject_group g JOIN td_student_stream s ON g.stream_id=s.stream_id')->result();
+        $category['subject'] = $this->db->query('select g.*,s.stream_name from td_subject_group g JOIN td_student_stream s ON g.stream_id=s.stream_id group by g.grp_id')->result();
 		$category['msg']='YES';
 		}
 		else {
@@ -46,7 +46,7 @@ public function checklist($depId,$actId,$uId)
 		if($checkExist > 0 ){
 
         $category['regyr'] = $this->db->query('select distinct reg_year from td_student_details')->result();
-        $category['subject'] = $this->db->query('select g.*,s.stream_name from td_subject_group g JOIN td_student_stream s ON g.stream_id=s.stream_id')->result();
+        $category['subject'] = $this->db->query('select g.*,s.stream_name from td_subject_group g JOIN td_student_stream s ON g.stream_id=s.stream_id group by g.grp_id')->result();
 
 		$category['msg']='YES';
 		}
@@ -69,7 +69,7 @@ public function checklist($depId,$actId,$uId)
 
 
 
-        $category['subject'] = $this->db->query('select g.*,s.stream_name from td_subject_group g JOIN td_student_stream s ON g.stream_id=s.stream_id')->result();
+        $category['subject'] = $this->db->query('select g.*,s.stream_name from td_subject_group g JOIN td_student_stream s ON g.stream_id=s.stream_id group by g.grp_id')->result();
 		$category['msg']='YES';
 		}
 		else {
@@ -115,7 +115,7 @@ public function checklist($depId,$actId,$uId)
 
 
 
-        $category['subject'] = $this->db->query('select g.*,s.stream_name from td_subject_group g JOIN td_student_stream s ON g.stream_id=s.stream_id')->result();
+        $category['subject'] = $this->db->query('select g.*,s.stream_name from td_subject_group g JOIN td_student_stream s ON g.stream_id=s.stream_id group by g.grp_id')->result();
 
 		$category['msg']='YES';
 		}
@@ -454,7 +454,7 @@ public function checklist($depId,$actId,$uId)
 
 
 
-        $category['subject'] = $this->db->query('select g.*,s.stream_name from td_subject_group g JOIN td_student_stream s ON g.stream_id=s.stream_id')->result();
+        $category['subject'] = $this->db->query('select g.*,s.stream_name from td_subject_group g JOIN td_student_stream s ON g.stream_id=s.stream_id group by g.grp_id')->result();
 		$category['msg']='YES';
 		}
 		else {

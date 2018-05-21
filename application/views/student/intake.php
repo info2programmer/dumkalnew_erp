@@ -74,11 +74,36 @@
     <tbody>
     <?php if(!empty($stream)) { 
       $i = 1; 
-	  $intake = $this->db->query('select g.*,i.* from td_subject_group g JOIN td_student_intake i ON g.grp_id=i.grp_id WHERE g.stream_id='.$strmDtl['stream_id'])->result_array();
+	  $intake = $this->db->query('select g.*,i.* from td_subject_group g JOIN td_student_intake i ON g.grp_id=i.grp_id WHERE g.stream_id='.$strmDtl['stream_id']. ' group by g.subject_1')->result_array();
       foreach($intake as $val) {?>
       <tr>
         <td><?php echo $i; ?></td>
-        <td><?php echo $val['subject_1']."<br> (".$val['subject_1_code'].",".$val['subject_2_code'].",".$val['subject_3_code'].")";?></td>
+        <td><?php
+        $combination=$this->db->query("SELECT subject_2_code,subject_3_code FROM td_subject_group WHERE grp_id='".$val['grp_id']."'")->result();
+        //var_dump($combination);
+        //echo $this->db->last_query();
+        echo $val['subject_1']."<br> (";
+        foreach($combination as $key){
+          echo "<br>".$key->subject_2_code;
+        }
+        foreach($combination as $key){
+          echo "<br>".$key->subject_3_code;
+        }
+        echo ")";
+        //echo $val['subject_1']."<br> (";
+        // foreach ($combination as $key ) {
+        //   echo trim($key->subject_1_cod,',');
+        // }
+        // foreach($combination as $key){
+        //   echo trim(", ".$key->subject_2_code,',');
+        // }
+        // foreach ($combination as $key) {
+        //   echo ", ".$key->subject_3_code;
+        // }
+        //echo ")";
+        // echo $val['subject_1']."<br> (".$val['subject_1_code'].",".$val['subject_2_code'].",".$val['subject_3_code'].")";
+        
+        ?></td>
         <td> <?php echo $val['gen'];?></td>
         <td><?php echo $val['gen_ph'];?></td>
         <td> <?php echo $val['sc'];?></td>

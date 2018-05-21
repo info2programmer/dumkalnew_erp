@@ -280,7 +280,9 @@ $checkExist = $this->db->query('SELECT * FROM tbl_access WHERE department_id='.$
 	{
 		$checkExist = $this->db->query('SELECT * FROM tbl_access WHERE department_id='.$depId.' AND activity_id='.$actId.' AND user_id='.$uId)->num_rows();
 		if($checkExist > 0 ){
-		$data['subject'] = $this->base_model->show_data('td_subject_group','*','')->result_array();
+		// $data['subject'] = $this->base_model->show_data('td_subject_group','*','')->result_array();
+		$data['subject'] = $this->db->query("SELECT DISTINCT(subject_1),subject_1_code FROM td_subject_group")->result_array();
+		
 		$data['msg']='YES';
 		}
 		else {

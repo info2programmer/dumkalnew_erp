@@ -68,14 +68,21 @@
                      </select>
                   </div>
                   </div>
+                  
                   <div class="form-group">
                   <div class="input-group-inline">
                      <label for="">Subject</label>
                      <select name="txt_sub1" id="txt_sub1" class="form-control">
                         <option value="" selected="selected" hidden>-Select-</option>
-                        <?php foreach($subject as $sbval) {?>
-                        <option value="<?php echo $sbval['subject1'];?>"><?php echo $sbval['subject1'];?></option>
-                        <?php } ?>
+                        
+                        <?php foreach($subject as $sbval) {
+                          if($sbval['subject1']!="")
+                          {
+                            ?>
+                            <option value="<?php echo $sbval['subject1'];?>"><?php echo $sbval['subject1'];?></option>
+                        <?php   }
+                        
+                         } ?>
                      </select>
                   </div>
                   </div>

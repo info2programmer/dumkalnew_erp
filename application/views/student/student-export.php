@@ -52,6 +52,7 @@
                     </select>
                </div>
                 <?php  foreach($subject as $val) {?>
+                <?php //var_dump($subject);die; ?>
                 <div class="form-group">
                 	<input type="radio" name="sub_grp" value="<?php echo $val['grp_id'];?>" style="margin-top:10px;"/> <?php echo $val['subject_1'];?> (<?php echo $val['subject_1_code'];?>) 
                 </div>

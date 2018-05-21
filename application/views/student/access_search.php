@@ -74,7 +74,9 @@
                      <select name="txt_sub1" id="txt_sub1" class="form-control">
                         <option value="" selected="selected" hidden>-Select-</option>
                         <?php foreach($subject as $sbval) {?>
-                        <option value="<?php echo $sbval['subject1'];?>"><?php echo $sbval['subject1'];?></option>
+                        <?php if($sbval['subject1']!=""): ?>
+                           <option value="<?php echo $sbval['subject1'];?>"><?php echo $sbval['subject1'];?></option>
+                        <?php endif; ?>
                         <?php } ?>
                      </select>
                   </div>
